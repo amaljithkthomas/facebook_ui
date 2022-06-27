@@ -9,6 +9,18 @@ String mohanlal = "assets/avatars/mohanlal_6.jpg";
 String raj_1 = "assets/avatars/prithviraj_9.jpg";
 String raj_2 = "assets/avatars/prithviraj_10.jpg";
 String sujith = "assets/avatars/sujith_5.jpg";
+String nivin = "assets/avatars/nivin_pauly.jpg";
+String mohanlal_1 = "assets/avatars/mohanlal.jpg";
+String prithvi = "assets/avatars/prithviraj.jpg";
+String tovino = "assets/avatars/tovino_minnal.jpg";
+String unni = "assets/avatars/unni_mukundan.jpg";
+String vinayakan = "assets/avatars/vinayakan.jpg";
+String fahad = "assets/avatars/fahad.jpg";
+String fishing = "assets/avatars/fishing.jpg";
+String kajal = "assets/avatars/kajal.jpg";
+String strell = "assets/avatars/strell.jpg";
+String sunny = "assets/avatars/sunny.jpg";
+
 
 //Posts//
 String dulq_1 = "assets/posts/dulq_1.jpg";

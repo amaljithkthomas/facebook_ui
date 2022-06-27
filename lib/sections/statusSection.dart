@@ -1,18 +1,12 @@
 import 'package:facebook_ui/widgets/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:facebook_ui/widgets/avatar.dart';
 
 class StatusSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: ClipRRect(
-        borderRadius: BorderRadius.circular(100),
-        child: Image.asset(
-          dq_2,
-          // width: 100,
-          // height: 100,
-        ),
-      ),
+      leading: Avatar(displayImage: dq_2,status: false,),
       title: const TextField(
         decoration: InputDecoration(
           hintText: "What's on your mind?",
@@ -21,7 +15,6 @@ class StatusSection extends StatelessWidget {
           disabledBorder: InputBorder.none,
           errorBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
-
         ),
       ),
     );
