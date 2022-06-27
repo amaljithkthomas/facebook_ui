@@ -1,8 +1,9 @@
 import 'package:facebook_ui/sections/statusSection.dart';
 import 'package:flutter/material.dart';
-import 'package:facebook_ui/widgets/appBarButtons.dart';
+import 'package:facebook_ui/widgets/circularButton.dart';
 import 'package:facebook_ui/sections/headerButtonSection.dart';
 import 'package:facebook_ui/sections/roomSection.dart';
+import 'package:facebook_ui/sections/storySection.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -27,13 +28,13 @@ class MyApp extends StatelessWidget {
             ),
           ),
           actions: [
-            AppBarButtons(
+            CircularButton(
               icon: Icon(Icons.search),
               onPressed: () {
                 print("Go to search screen");
               },
             ),
-            AppBarButtons(
+            CircularButton(
               icon: Icon(Icons.chat),
               onPressed: () {
                 print("Go to messages screen");
@@ -49,6 +50,9 @@ class MyApp extends StatelessWidget {
             thickDivider,
             RoomSection(),
             thickDivider,
+            StorySection(),
+            thickDivider,
+
 
 
           ],

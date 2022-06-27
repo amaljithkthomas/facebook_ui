@@ -25,9 +25,9 @@ class RoomSection extends StatelessWidget {
       ),
     );
   }
-  Widget sizedBox = const SizedBox(
-    width: 20,
-  );
+  // Widget sizedBox = const SizedBox(
+  //   width: 20,
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -39,25 +39,25 @@ class RoomSection extends StatelessWidget {
         children: [
           createRoomButton(),
           //sizedBox,
-          Avatar(displayImage: dq_2,status: true, ),
+          Avatar(displayImage: dq_2,displayStatus: true, ),
           //sizedBox,
-          Avatar(displayImage: fishing,status: true, ),
+          Avatar(displayImage: fishing,displayStatus: true, ),
           //sizedBox,
-          Avatar(displayImage: sujith, status: true,),
+          Avatar(displayImage: sujith, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: sunny, status: true,),
+          Avatar(displayImage: sunny, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: tovino, status: true,),
+          Avatar(displayImage: tovino, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: nivin, status: true,),
+          Avatar(displayImage: nivin, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: fahad, status: true,),
+          Avatar(displayImage: fahad, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: mohanlal_1, status: true,),
+          Avatar(displayImage: mohanlal_1, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: kajal, status: true,),
+          Avatar(displayImage: kajal, displayStatus: true,),
           //sizedBox,
-          Avatar(displayImage: strell, status: true,),
+          Avatar(displayImage: strell, displayStatus: true,),
 
           
         ],

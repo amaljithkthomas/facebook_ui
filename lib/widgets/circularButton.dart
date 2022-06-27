@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AppBarButtons extends StatelessWidget {
+class CircularButton extends StatelessWidget {
   final Widget? icon;
   final void Function()? onPressed;
+  final Color? iconColor;
 
-  AppBarButtons({
+  CircularButton({
     required this.icon,
     required this.onPressed,
+    this.iconColor = Colors.black
   });
 
   @override
@@ -20,7 +22,7 @@ class AppBarButtons extends StatelessWidget {
       child: IconButton(
         onPressed: onPressed,
         icon: icon!,
-        color: Colors.black,
+        color: iconColor,
       ),
     );
   }

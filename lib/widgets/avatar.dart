@@ -3,9 +3,9 @@ import 'package:facebook_ui/widgets/assets.dart';
 
 class Avatar extends StatelessWidget {
   final String? displayImage;
-  final bool? status;
+  final bool? displayStatus;
 
-  Avatar({required this.displayImage, this.status });
+  Avatar({required this.displayImage, this.displayStatus });
   @override
   Widget build(BuildContext context) {
     Widget statusIndicator;
@@ -28,7 +28,7 @@ class Avatar extends StatelessWidget {
     //     {
     //       statusIndicator = const SizedBox();
     //     }
-    status == true?
+    displayStatus == true?
         statusIndicator = Positioned(
           bottom: 2,
           right: 3,
