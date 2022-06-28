@@ -20,6 +20,7 @@ String fishing = "assets/avatars/fishing.jpg";
 String kajal = "assets/avatars/kajal.jpg";
 String strell = "assets/avatars/strell.jpg";
 String sunny = "assets/avatars/sunny.jpg";
+String amalAvatar = "assets/avatars/amal_avatar.JPG";
 
 
 //Posts//
@@ -33,6 +34,8 @@ String mm_6 = "assets/posts/mamooty_6.jpg";
 String ml_8 = "assets/posts/mohanlal_8.jpg";
 String ml_9 = "assets/posts/mohanlal_9.jpg";
 String pranav = "assets/posts/pranav_10.jpg";
+String sujith_post = "assets/posts/sujith_post.jpg";
+String amal_post = "assets/posts/amal_post.jpg";
 
 //story//
 String ffStory = "assets/story/ffreak_story.jpg";
