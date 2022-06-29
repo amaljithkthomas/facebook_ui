@@ -4,6 +4,9 @@ import 'package:facebook_ui/widgets/avatar.dart';
 import 'package:facebook_ui/widgets/blueTick.dart';
 import 'package:facebook_ui/widgets/assets.dart';
 
+import '../sections/headerButtonSection.dart';
+import 'headerButton.dart';
+
 class PostCard extends StatelessWidget {
   final String? avatar;
   final String? profileName;
@@ -14,6 +17,8 @@ class PostCard extends StatelessWidget {
   final String? postLikeUpdate;
   final String? postCommentUpdate;
   final String? postShareUpdate;
+  final double? avatarWidth;
+  final double? avatarHeight;
 
   PostCard({
     required this.avatar,
@@ -24,8 +29,9 @@ class PostCard extends StatelessWidget {
     this.postTittle,
     this.postLikeUpdate,
     this.postCommentUpdate,
-    this.postShareUpdate
-
+    this.postShareUpdate,
+    this.avatarWidth,
+    this.avatarHeight,
   });
 
   Widget postCardHeader() {
@@ -91,21 +97,26 @@ class PostCard extends StatelessWidget {
   }
 
   Widget postTittleSection() {
-    return Container(
+    return
+    (postTittle != null) && postTittle != "" ?
+      Container(
       margin: EdgeInsets.only(
         //top: 5,
         bottom: 10,
+        left: 7,
+        right: 5,
       ),
       child: Text(
         (postTittle != null) ? postTittle! : "",
         style: TextStyle(fontSize: 19),
       ),
-    );
+    ) : SizedBox();
+
   }
 
   Widget displayCount({String? label}) {
     return Text(
-      (label != null)? label :"500",
+      (label != null) ? label : "500",
       style: TextStyle(color: Colors.grey[700]),
     );
   }
@@ -148,7 +159,7 @@ class PostCard extends StatelessWidget {
                   width: 5,
                 ),
                 Text(
-                  "comment",
+                  "Comment",
                   style: TextStyle(color: Colors.grey[700]),
                 ),
                 const SizedBox(
@@ -159,12 +170,29 @@ class PostCard extends StatelessWidget {
                   width: 5,
                 ),
                 Text(
-                  "share",
+                  "Share",
                   style: TextStyle(color: Colors.grey[700]),
                 ),
                 const SizedBox(
                   width: 5,
                 ),
+                Avatar(
+                  displayImage: avatar,
+                  width: avatarWidth,
+                  height: avatarHeight,
+                ),
+                // const SizedBox(
+                //   width: 5,
+                // ),
+                IconButton(
+                    onPressed: () {
+                      print("open drop down");
+                    },
+                    icon: Icon(
+                      Icons.arrow_drop_down,
+                      size: 15,
+                      color: Colors.grey[700],
+                    ))
               ],
             ),
           )
@@ -183,6 +211,30 @@ class PostCard extends StatelessWidget {
           postTittleSection(),
           postImageSection(context),
           postFooterSection(),
+          Divider(thickness: 1,color: Colors.grey[300],),
+          HeaderButtonSection(
+            buttonOne: headerButton(
+              onPressed: (){print("Like button pressed");},
+              icon: Icons.thumb_up,
+              iconColor: Colors.grey[700],
+              buttonTextColor: Colors.grey[700],
+              buttonName: "Like"
+            ),
+            buttonTwo: headerButton(
+                onPressed: (){print("Comment button pressed");},
+                icon: Icons.chat,
+                iconColor: Colors.grey[700],
+                buttonTextColor: Colors.grey[700],
+                buttonName: "Comment"
+            ),
+            buttonThree: headerButton(
+                onPressed: (){print("Share button pressed");},
+                icon: Icons.share,
+                iconColor: Colors.grey[700],
+                buttonTextColor: Colors.grey[700],
+                buttonName: "Share"
+            ),
+          )
         ],
       ),
     );

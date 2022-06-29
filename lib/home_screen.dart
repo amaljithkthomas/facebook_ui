@@ -1,5 +1,7 @@
 import 'package:facebook_ui/sections/statusSection.dart';
+import 'package:facebook_ui/sections/suggestionSection.dart';
 import 'package:facebook_ui/widgets/assets.dart';
+import 'package:facebook_ui/widgets/headerButton.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_ui/widgets/circularButton.dart';
 import 'package:facebook_ui/sections/headerButtonSection.dart';
@@ -14,7 +16,10 @@ class MyApp extends StatelessWidget {
       thickness: 1,
       color: Colors.grey[300],
     );
-    Widget thickDivider = Divider(thickness: 10,color: Colors.grey[300],);
+    Widget thickDivider = Divider(
+      thickness: 10,
+      color: Colors.grey[300],
+    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -48,7 +53,32 @@ class MyApp extends StatelessWidget {
           children: [
             StatusSection(),
             thindivider,
-            HeaderButtonSection(),
+            HeaderButtonSection(
+              buttonOne: headerButton(
+                  icon: Icons.video_call,
+                  iconColor: Colors.red,
+                  buttonName: "Live",
+                  buttonTextColor: Colors.black,
+                  onPressed: () {
+                    print("Go to live");
+                  }),
+              buttonTwo: headerButton(
+                  icon: Icons.photo_library,
+                  iconColor: Colors.green,
+                  buttonName: "Photo",
+                  buttonTextColor: Colors.black,
+                  onPressed: () {
+                    print("Go to upload image ");
+                  }),
+              buttonThree: headerButton(
+                  icon: Icons.video_call,
+                  iconColor: Colors.purple,
+                  buttonName: "Go to room",
+                  buttonTextColor: Colors.black,
+                  onPressed: () {
+                    print("Go to room");
+                  }),
+            ),
             thickDivider,
             RoomSection(),
             thickDivider,
@@ -62,8 +92,10 @@ class MyApp extends StatelessWidget {
               postImage: ffStory,
               postTittle: "Next fishing video",
               postLikeUpdate: "10k",
-              postCommentUpdate: "6k",
-              postShareUpdate: "1k",
+              postCommentUpdate: "6K",
+              postShareUpdate: "1K",
+              avatarWidth: 20,
+              avatarHeight: 20,
             ),
             thickDivider,
             PostCard(
@@ -73,9 +105,13 @@ class MyApp extends StatelessWidget {
               //postTime: "5h",
               postImage: sujith_post,
               postTittle: "Happy Diwali!!!",
-              postLikeUpdate: "12k",
-              postCommentUpdate: "5k",
+              postLikeUpdate: "12K",
+              postCommentUpdate: "5K",
+              avatarWidth: 20,
+              avatarHeight: 20,
             ),
+            thickDivider,
+            SuggestionSection(),
             thickDivider,
             PostCard(
               avatar: kajal,
@@ -84,9 +120,11 @@ class MyApp extends StatelessWidget {
               postTime: "8h",
               postImage: kajalStory,
               //postTittle: "Happy Diwali!!!",
-              postLikeUpdate: "100k",
-              postCommentUpdate: "50k",
-              postShareUpdate: "10k",
+              postLikeUpdate: "100K",
+              postCommentUpdate: "50K",
+              postShareUpdate: "10K",
+              avatarWidth: 20,
+              avatarHeight: 20,
             ),
             thickDivider,
             PostCard(
@@ -99,16 +137,27 @@ class MyApp extends StatelessWidget {
               postLikeUpdate: "250",
               postCommentUpdate: "50",
               postShareUpdate: "25",
+              avatarWidth: 20,
+              avatarHeight: 20,
             ),
-
-
-
-
-
+            thickDivider,
+            PostCard(
+              avatar: sunny,
+              profileName: "Sunny Wyane",
+              verifiedProfile: true,
+              postTime: "Nov 4",
+              postImage: diwaliPost,
+              postTittle: diwali,
+              postLikeUpdate: "250k",
+              postCommentUpdate: "50k",
+              postShareUpdate: "2.5k",
+              avatarWidth: 20,
+              avatarHeight: 20,
+            ),
+            thickDivider,
           ],
         ),
       ),
     );
   }
 }
-

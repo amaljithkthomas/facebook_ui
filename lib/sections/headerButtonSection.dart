@@ -1,25 +1,37 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/headerButton.dart';
+
 class HeaderButtonSection extends StatelessWidget {
-  Widget headerButton({
-    required void Function()? onPressed,
-    required IconData? icon,
-    required Color? iconColor,
-    required String? buttonName,
-    required Color? buttonTextColor,
-  }) {
-    return TextButton.icon(
-      onPressed: onPressed,
-      icon: Icon(
-        icon,
-        color: iconColor,
-      ),
-      label: Text(
-        buttonName!,
-        style: TextStyle(color: buttonTextColor),
-      ),
-    );
-  }
+  final Widget? buttonOne;
+  final Widget? buttonTwo;
+  final Widget? buttonThree;
+
+  HeaderButtonSection({
+    required this.buttonOne,
+    required this.buttonTwo,
+    required this.buttonThree
+  });
+
+  // Widget headerButton({
+  //   required void Function()? onPressed,
+  //   required IconData? icon,
+  //   required Color? iconColor,
+  //   required String? buttonName,
+  //   required Color? buttonTextColor,
+  // }) {
+  //   return TextButton.icon(
+  //     onPressed: onPressed,
+  //     icon: Icon(
+  //       icon,
+  //       color: iconColor,
+  //     ),
+  //     label: Text(
+  //       buttonName!,
+  //       style: TextStyle(color: buttonTextColor),
+  //     ),
+  //   );
+  // }
 
   Widget verticalDivider = VerticalDivider(
     thickness: 1,
@@ -33,36 +45,11 @@ class HeaderButtonSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          headerButton(
-            onPressed: () {
-              print("Go to live");
-            },
-            icon: Icons.video_call,
-            iconColor: Colors.red,
-            buttonName: "Live",
-            buttonTextColor: Colors.black,
-          ),
+          buttonOne!,
           verticalDivider,
-          headerButton(
-            onPressed: () {
-              print("Go to photo Upload");
-            },
-            icon: Icons.image,
-            iconColor: Colors.green,
-            buttonName: "Photo",
-            buttonTextColor: Colors.black,
-          ),
+          buttonTwo!,
           verticalDivider,
-          headerButton(
-            onPressed: () {
-              print("Go to room");
-            },
-            icon: Icons.video_call,
-            iconColor: Colors.purple,
-            buttonName: "Room",
-            buttonTextColor: Colors.black,
-          ),
-
+          buttonThree!,
         ],
       ),
     );

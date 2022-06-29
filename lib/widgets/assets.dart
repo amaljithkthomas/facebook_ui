@@ -36,6 +36,7 @@ String ml_9 = "assets/posts/mohanlal_9.jpg";
 String pranav = "assets/posts/pranav_10.jpg";
 String sujith_post = "assets/posts/sujith_post.jpg";
 String amal_post = "assets/posts/amal_post.jpg";
+String diwaliPost = "assets/posts/diwali_post.jpg";
 
 //story//
 String ffStory = "assets/story/ffreak_story.jpg";
@@ -47,6 +48,8 @@ String fahadStory = "assets/story/fahad_story.jpg";
 String mohanlalStory = "assets/story/mohanlal_story.jpg";
 String kajalStory = "assets/story/kajal_story.jpg";
 String strellStory = "assets/story/strell_story.jpg";
+//*****************//
+String diwali = "Wish you all a very very happy diwali and hope that every person transforms from the darkness to happiness. Let's celebrate the festival in the true sense by spreading joy and light up the world of others. Have a happy, safe and blessed Diwali!";
 
 
 
